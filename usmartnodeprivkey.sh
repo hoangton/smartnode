@@ -5,3 +5,6 @@ printf "SmartNode GenKey: "
 read _nodePrivateKey
 cd && cd .smartcash
 sed -i "s/^\(smartnodeprivkey\s*=\s*\).*\$/\1$_nodePrivateKey/"  smartcash.conf
+smartcash-cli stop 
+sleep 20 
+smartcashd
